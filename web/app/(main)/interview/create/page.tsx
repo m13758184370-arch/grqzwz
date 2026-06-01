@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Loader2, ArrowRight } from "lucide-react";
 import { toast } from "sonner";
@@ -8,7 +8,7 @@ import { api } from "@/lib/api-client";
 import { POSITION_LEVELS, COMPANY_TYPES } from "@/lib/types";
 import type { Industry } from "@/lib/types";
 
-export default function CreateInterviewPage() {
+function CreateInterviewContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [industries, setIndustries] = useState<Industry[]>([]);
@@ -134,5 +134,13 @@ export default function CreateInterviewPage() {
         </button>
       </div>
     </div>
+  );
+}
+
+export default function CreateInterviewPage() {
+  return (
+    <Suspense fallback={<div className="max-w-lg mx-auto px-4 py-20 text-center"><Loader2 className="w-6 h-6 animate-spin mx-auto text-blue-600" /></div>}>
+      <CreateInterviewContent />
+    </Suspense>
   );
 }

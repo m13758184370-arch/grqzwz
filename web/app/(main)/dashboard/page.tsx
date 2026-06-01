@@ -101,7 +101,7 @@ export default function DashboardPage() {
               >
                 <div>
                   <p className="font-medium text-sm">
-                    {(r.raw_data as Record<string, string>)?.name || "未命名简历"}
+                    {(r.raw_data as unknown as Record<string, string>)?.name || "未命名简历"}
                   </p>
                   <p className="text-xs text-gray-400 mt-0.5">
                     {r.position_level || ""} · {formatDate(r.created_at)}
