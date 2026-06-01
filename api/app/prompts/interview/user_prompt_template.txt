@@ -1,0 +1,23 @@
+请为目标行业和职位生成面试题目集。
+
+## 岗位信息
+行业：{industry_name}
+职位类型：{role_type}
+职级：{position_level}
+目标公司类型：{company_type}
+
+## 用户简历摘要
+{resume_summary}
+
+## 专业领域要求
+{industry_professional_instructions}
+
+## 公司类型要求
+{company_type_instructions}
+
+## 特殊要求
+1. 职级为"{position_level}"，请确保题目难度严格匹配
+2. 如果有用户简历信息，请根据简历中的具体项目经验设计针对性题目
+3. 专业面试题中至少5题与用户的实际项目经验相关，在related_to_resume字段标记
+4. 案例分析题要包含具体的数据假设和计算逻辑
+5. 所有题目必须是开放式问题，引导候选人展示思考过程，而非简单的是非问答

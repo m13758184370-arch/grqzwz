@@ -1,0 +1,16 @@
+node_modules/
+.next/
+out/
+.env
+.env.local
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+playwright-report/
+test-results/
+.vscode/
+.idea/
